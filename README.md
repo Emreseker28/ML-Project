@@ -15,20 +15,20 @@ The dataset consists of second hand car prices and their features. Dataset taken
 
 ## Graphs
 
-## Fuel Type vs Price
+### Fuel Type vs Price
 Please note that the 'Unknown' column represents the datas that has no information about their fuel types.
 
 ![Graph Title](/fuel_vs_price.png)
 
-## Brand vs Price
+### Brand vs Price
 
 ![Graph Title](/brand_vs_price.png)
 
-## Heatmap
+### Heatmap
 
 ![Graph Title](heatmap.png)
 
-## Pairplot
+### Pairplot
 
 ![Graph Title](pairplot.png)
 
