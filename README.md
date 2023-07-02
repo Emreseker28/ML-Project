@@ -15,9 +15,21 @@ The dataset consists of second hand car prices and their features. Dataset taken
 
 ## Graphs
 
+## Fuel Type vs Price
+Please note that the 'Unknown' column represents the datas that has no information about their fuel types.
+
 ![Graph Title](/fuel_vs_price.png)
+
+## Brand vs Price
+
 ![Graph Title](/brand_vs_price.png)
+
+## Heatmap
+
 ![Graph Title](heatmap.png)
+
+## Pairplot
+
 ![Graph Title](pairplot.png)
 
 ## Preprocessing
@@ -50,6 +62,7 @@ Gaussian Naive Bayes is a simple yet effective probabilistic classification algo
 The algorithm assumes that the features in the dataset follow a Gaussian (normal) distribution and calculates the likelihood of a particular class based on the probability density function (PDF) of each feature. The "naive" assumption in Gaussian Naive Bayes refers to the independence assumption, meaning that it assumes that the features are conditionally independent given the class label.
 
 During training, Gaussian Naive Bayes estimates the mean and standard deviation for each feature in each class. When making predictions for new data points, it calculates the likelihood of each class based on the Gaussian distribution parameters and selects the class with the highest likelihood as the predicted class.
+
 ![Graph Title](gnb.png)
 
 ### Decision Tree
@@ -58,7 +71,8 @@ The Decision Tree algorithm works by recursively splitting the dataset based on 
 
 Entropy is a popular criterion used to measure the impurity of a node in a Decision Tree. It quantifies the uncertainty in the node by calculating the entropy of the class labels present in the node. The goal of the algorithm is to find the feature and split point that minimize the entropy, leading to more pure and homogeneous subsets.
 
-![Graph Title](df.png)
+
+![Graph Title](dt.png)
 
 ### Random Forest
 
@@ -67,4 +81,5 @@ Random Forest is an ensemble learning algorithm that combines multiple decision 
 Random Forest works by creating a collection of decision trees, each trained on a different subset of the training data and using a random subset of features. During training, each decision tree in the Random Forest is built using a process similar to the Decision Tree algorithm. However, instead of considering all the features at each split, Random Forest only considers a random subset of features, which helps to reduce overfitting and increase diversity among the trees.
 
 The Gini criterion is one of the options for measuring impurity used in the Decision Tree algorithm. It quantifies the impurity or the degree of class mixing in a node. The Gini index measures the probability of misclassifying a randomly chosen element in a node if it were randomly labeled according to the distribution of classes in that node.
+
 ![Graph Title](rf.png)
