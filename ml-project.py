@@ -52,6 +52,7 @@ plt.show()
 
 #Correlation between different variables
 corr = data[['price', 'mileage', 'year']].corr()
+plt.title('Heatmap')
 sns.heatmap(corr, annot=True)
 plt.show()
 
@@ -94,12 +95,12 @@ X_test = sc.transform(x_test)
 #K-Nearest Neighbors
 from sklearn.neighbors import KNeighborsClassifier
 
-knn = KNeighborsClassifier(n_neighbors=9, metric='minkowski')
+knn = KNeighborsClassifier(n_neighbors=10, metric='minkowski')
 knn.fit(X_train,y_train)
 
 y_pred = knn.predict(X_test)
 
-
+plt.title('KNeighbors Classifier')
 plt.scatter(y_pred, y_test)
 #%%
 #Support Vector
@@ -109,7 +110,7 @@ svc.fit(X_train,y_train)
 
 y_pred = svc.predict(X_test)
 
-
+plt.title('Support Vector Classifier')
 plt.scatter(y_pred, y_test)
 #%%
 #Gaussian Naive Bayes
@@ -118,19 +119,21 @@ gnb = GaussianNB()
 gnb.fit(X_train, y_train)
 
 y_pred = gnb.predict(X_test)
-
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test,y_pred)
+print(cm)
+plt.title('Gaussian Naive Bayes')
 plt.scatter(y_pred, y_test)
 
 #%%
 #Decision Tree
 from sklearn.tree import DecisionTreeClassifier
-import scikitplot as skplt
 
 dtc = DecisionTreeClassifier(criterion = 'entropy')
 
 dtc.fit(X_train, y_train)
 y_pred = dtc.predict(X_test)
-
+plt.title('Decision Tree Classifier')
 plt.scatter(y_pred, y_test)
 #%%
 #Random Forest
@@ -139,6 +142,6 @@ rfc = RandomForestClassifier(n_estimators=15, criterion = 'gini')
 
 rfc.fit(X_train, y_train)
 y_pred = rfc.predict(X_test)
-
+plt.title('Random Forest Classifier')
 plt.scatter(y_pred, y_test)
 # %%
